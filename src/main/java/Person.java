@@ -13,6 +13,7 @@ public class Person {
     private List<Person> siblings = new ArrayList<>();
     private List<Person> children = new ArrayList<>();
     private List<Pet> pets = new ArrayList<>();
+    private Person partner;
 
 
     public Person(String firstName, String middleName, String lastName, int age, String gender) {
@@ -28,7 +29,7 @@ public class Person {
     }
 
     public Person(String firstName, String middleName, String lastName, String nickName, String gender, int age, Person mother, Person father,
-                  List<Person> siblings, List<Person> children, List<Pet> pets) {
+                  List<Person> siblings, List<Person> children, List<Pet> pets, Person partner) {
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
@@ -40,6 +41,7 @@ public class Person {
         this.siblings = siblings;
         this.children = children;
         this.pets = pets;
+        this.partner = partner;
     }
 
 
@@ -87,6 +89,10 @@ public class Person {
         return pets;
     }
 
+    public Person getPartner() {
+        return partner;
+    }
+
 
     public void setNickName(String nickName) {
         this.nickName = nickName;
@@ -114,6 +120,10 @@ public class Person {
 
     public void setPets(List<Pet> pets) {
         this.pets = pets;
+    }
+
+    public void setPartner(Person partner) {
+        this.partner = partner;
     }
 
 
@@ -154,7 +164,60 @@ public class Person {
         return grandChildren;
     }
 
+    public List<Person> getNieces() {
+        List<Person> nieces = new ArrayList<>();
+        for(Person sibling : getSiblings()) {
+            for(Person child : sibling.getChildren()) {
+                if(child.getGender().equalsIgnoreCase("female")) {
+                    nieces.add(child);
+                }
+            }
+        }
+        return nieces;
+    }
+
+    public List<Pet> getPetsOfGrandChildren() {
+        List<Pet> petsOfGrandChildren = new ArrayList<>();
+        List<Person> grandChildren = getGrandChildren();
+        for(Person child : grandChildren) {
+            petsOfGrandChildren.addAll(child.getPets());
+        }
+        return petsOfGrandChildren;
+    }
+
     public void increaseAge() {
         age++;
     }
+
+    public List<Person> getFamilyReunionList() {
+        List<Person> familyReunionList = new ArrayList<>();
+
+        if (this.mother != null) {
+            familyReunionList.add(this.mother);
+        }
+
+        if (this.father != null) {
+            familyReunionList.add(this.father);
+        }
+
+        if (this.siblings != null) {
+            familyReunionList.addAll(this.siblings);
+        }
+
+        if (this.children != null) {
+            familyReunionList.addAll(this.children);
+            List<Person> grandchildren = getGrandChildren();
+            if(grandchildren != null) {
+                familyReunionList.addAll(grandchildren);
+            }
+        }
+
+        if (this.partner != null) {
+            familyReunionList.add(this.partner);
+        }
+
+        return familyReunionList;
+    }
+
+
 }
