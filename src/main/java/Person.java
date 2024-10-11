@@ -6,7 +6,7 @@ public class Person {
     private final String middleName;
     private final String lastName;
     private String nickName;
-    private final String sex;
+    private final String gender;
     private int age;
     private Person mother;
     private Person father;
@@ -15,25 +15,25 @@ public class Person {
     private List<Pet> pets = new ArrayList<>();
 
 
-    public Person(String firstName, String middleName, String lastName, int age, String sex) {
+    public Person(String firstName, String middleName, String lastName, int age, String gender) {
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
         this.age = age;
-        this.sex = sex;
+        this.gender = gender;
     }
 
-    public Person(String firstName, String lastName, int age, String sex) {
-        this(firstName, "", lastName, age, sex);
+    public Person(String firstName, String lastName, int age, String gender) {
+        this(firstName, "", lastName, age, gender);
     }
 
-    public Person(String firstName, String middleName, String lastName, String nickName, String sex, int age, Person mother, Person father,
+    public Person(String firstName, String middleName, String lastName, String nickName, String gender, int age, Person mother, Person father,
                   List<Person> siblings, List<Person> children, List<Pet> pets) {
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
         this.nickName = nickName;
-        this.sex = sex;
+        this.gender = gender;
         this.age = age;
         this.mother = mother;
         this.father = father;
@@ -59,8 +59,8 @@ public class Person {
         return nickName;
     }
 
-    public String getSex() {
-        return sex;
+    public String getGender() {
+        return gender;
     }
 
     public int getAge() {
@@ -127,11 +127,11 @@ public class Person {
             this.children.add(child);
         }
 
-        if(this.sex.equalsIgnoreCase("male")) {
+        if(this.gender.equalsIgnoreCase("male")) {
             child.setFather(this);
         }
 
-        if(this.sex.equalsIgnoreCase("female")) {
+        if(this.gender.equalsIgnoreCase("female")) {
             child.setMother(this);
         }
     }
