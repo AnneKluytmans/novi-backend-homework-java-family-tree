@@ -3,10 +3,10 @@ public class Pet {
     private int age;
     private final String gender;
     private final String species;
-    private int weight;
+    private float weight;
     private Person owner;
 
-    public Pet(String name, int age, String gender, String species, int weight, Person owner) {
+    public Pet(String name, int age, String gender, String species, float weight, Person owner) {
         this.name = name;
         this.age = age;
         this.gender = gender;
@@ -39,7 +39,7 @@ public class Pet {
         return species;
     }
 
-    public int getWeight() {
+    public float getWeight() {
         return weight;
     }
 
@@ -56,7 +56,7 @@ public class Pet {
         this.age = age;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(float weight) {
         this.weight = weight;
     }
 
