@@ -24,7 +24,7 @@ De `Person` heeft volgende attributen:
 - name
 - middleName
 - lastName
-- sex
+- gender
 - age
 - mother (Person)
 - father (Person)
@@ -41,8 +41,8 @@ De `Pet` heeft minimaal de volgende attributen:
 
 De `Person` bevat naast de attributen het volgende:
 
-- constructor met name, lastname, age en sex
-- constructor met name, middleName, lastname, age en sex
+- constructor met name, lastname, age en gender
+- constructor met name, middleName, lastname, age en gender
 - getters & setters
 - addParents methode
 - addChild methode
