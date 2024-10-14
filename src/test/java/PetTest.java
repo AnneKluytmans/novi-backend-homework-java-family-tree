@@ -1,24 +1,19 @@
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class PetTest {
     //arrange
-    private Person paul = new Person("Paul", "Locan", 33, "male");
-    private Person mirjam = new Person("Mirjam", "Powall", 45, "female");
+    private Person paul;
+    private Person mirjam;
     private Pet pet;
 
     @BeforeEach
     void setUp() {
+        paul = new Person("Paul", "Locan", 33, "male");
+        mirjam = new Person("Mirjam", "Powall", 45, "female");
         pet = new Pet("Maple", 4, "dog", "male");
-    }
-
-    @AfterEach
-    void tearDown() {
     }
 
     @Test
