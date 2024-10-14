@@ -31,11 +31,9 @@ class PersonTest {
     void canAddParents() {
         //act
         bob.addParents(father, mother);
-        Person testMother = bob.getMother();
-        Person testFather = bob.getFather();
         //assert
-        assertEquals(father, testFather);
-        assertEquals(mother, testMother);
+        assertEquals(father, bob.getFather());
+        assertEquals(mother, bob.getMother());
     }
 
     @Test
