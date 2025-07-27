@@ -189,34 +189,34 @@ public class Person {
         age++;
     }
 
-    public List<Person> getFamilyReunionList() {
-        List<Person> familyReunionList = new ArrayList<>();
+    public List<Person> getInvatationList() {
+        List<Person> familyInvatationList = new ArrayList<>();
 
         if (this.mother != null) {
-            familyReunionList.add(this.mother);
+            familyInvatationList.add(this.mother);
         }
 
         if (this.father != null) {
-            familyReunionList.add(this.father);
+            familyInvatationList.add(this.father);
         }
 
         if (this.siblings != null) {
-            familyReunionList.addAll(this.siblings);
+            familyInvatationList.addAll(this.siblings);
         }
 
         if (this.children != null) {
-            familyReunionList.addAll(this.children);
+            familyInvatationList.addAll(this.children);
             List<Person> grandchildren = getGrandChildren();
             if(grandchildren != null) {
-                familyReunionList.addAll(grandchildren);
+                familyInvatationList.addAll(grandchildren);
             }
         }
 
         if (this.partner != null) {
-            familyReunionList.add(this.partner);
+            familyInvatationList.add(this.partner);
         }
 
-        return familyReunionList;
+        return familyInvatationList;
     }
 
 

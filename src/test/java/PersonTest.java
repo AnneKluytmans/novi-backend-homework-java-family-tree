@@ -134,7 +134,7 @@ class PersonTest {
         bob.addChild(child);
         bob.setPartner(partner);
         //act
-        List<Person> familyReunionList = bob.getFamilyReunionList();
+        List<Person> familyReunionList = bob.getInvatationList();
         //assert
         assertTrue(familyReunionList.contains(bob.getMother()));
         assertTrue(familyReunionList.contains(bob.getFather()));
