@@ -54,7 +54,7 @@ The application allows you to build a family tree by adding people, pets, and fa
 2. Navigate to the `Main` class
 3. Locate the `main` method and click the green play button to **Run 'Main'** or use the terminal:
 ```bash
-./mvnw clean compile exec:java
+mvn clean compile exec:java
 ```
 
 ### How to Run Tests
@@ -64,7 +64,7 @@ The application allows you to build a family tree by adding people, pets, and fa
    or
    Open a terminal in the root of the project and run:
 ```bash
-./mvnw test
+mvn test
 ```
 
 ## Credits
