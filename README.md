@@ -2,7 +2,7 @@
 
 ## About the Project
 
-This repository contains my implementation of the **Family Tree** assignment for the Backend Java module at [Novi University](https://www.novi.nl).  
+This repository contains my implementation of the **Family Tree** assignment for the Backend module at [Novi University](https://www.novi.nl).  
 The goal of this project is to practice working with **Java classes**, **object relationships** (inheritance, aggregation), and **unit testing** using JUnit.  
 The application allows you to build a family tree by adding people, pets, and family relationships such as parents, children, siblings, and grandchildren.
 
@@ -50,17 +50,9 @@ The application allows you to build a family tree by adding people, pets, and fa
 
 ## How to Run
 
-1. Clone the repository:
-   ```bash
-    git@github.com:AnneKluytmans/novi-backend-homework-java-pokemon-interfaces.git
-    ```
-   or
-    ```bash
-    git clone https://github.com/AnneKluytmans/novi-backend-homework-java-pokemon-interfaces.git 
-    ```
-2. Open the project in your IDE (IntelliJ IDEA)
-3. Navigate to the `Main` class
-4. Locate the `main` method and click the green play button → select **Run 'Main'** or use the terminal:
+1. Open the project in your IDE (IntelliJ IDEA)
+2. Navigate to the `Main` class
+3. Locate the `main` method and click the green play button to **Run 'Main'** or use the terminal:
 ```bash
 ./mvnw clean compile exec:java
 ```
